@@ -26,6 +26,32 @@ To try for yourself:
 3. `make`
 4. `./quad.x`
 
+```
+begin
+
+ARGV:
+./quad.x
+
+n=1 int=2.0000000000000000e+00 err=-3.1705803038420699e-01
+n=2 int=1.6758236553899863e+00 err=7.1183142258066656e-03
+n=3 int=1.6830035477269170e+00 err=-6.1578111123949952e-05
+n=4 int=1.6829416886959734e+00 err=2.8091981962852230e-07
+n=5 int=1.6829419704071922e+00 err=-7.9139916842052571e-10
+n=6 int=1.6829419696142791e+00 err=1.5139001163788635e-12
+n=7 int=1.6829419696157950e+00 err=-1.9984014443252818e-15
+n=8 int=1.6829419696157930e+00 err=0.0000000000000000e+00
+n=9 int=1.6829419696157930e+00 err=0.0000000000000000e+00
+n=10 int=1.6829419696157930e+00 err=0.0000000000000000e+00
+n=11 int=1.6829419696157930e+00 err=0.0000000000000000e+00
+n=12 int=1.6829419696157928e+00 err=2.2204460492503131e-16
+n=13 int=1.6829419696157930e+00 err=0.0000000000000000e+00
+n=14 int=1.6829419696157932e+00 err=-2.2204460492503131e-16
+n=15 int=1.6829419696157935e+00 err=-4.4408920985006262e-16
+n=16 int=1.6829419696157930e+00 err=0.0000000000000000e+00
+
+end
+```
+
 # Future Work
 
 It seems to me that the bottleneck for this method is the use of a bisection search on a uniform grid of intervals to find the zeroes. I strongly suspect that with a bit more knowledge about the behaviour of the Legendre polynomials, it should be possible to use a far superior algorithm to find the zeros of the Legendre polynomials. The method would be much faster subsequently.

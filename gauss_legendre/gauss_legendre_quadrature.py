@@ -179,7 +179,10 @@ if __name__ == "__main__":
 
     NMAX = 16
     fname = "gauss_legendre.txt"
-    plot = True
+
+    visualization = True
+    extension = "png"
+    resolution = 600
 
     open(fname, "w")
     for n in range(NMAX):
@@ -195,7 +198,7 @@ if __name__ == "__main__":
                 )
             f.write("  },\n")
 
-    if plot:
+    if visualization:
         x = np.linspace(-1.0, 1.0, 1024)
         plt.figure()
         for ell in range(7):
@@ -208,4 +211,5 @@ if __name__ == "__main__":
         plt.ylabel("$P_n(x)$")
         plt.title("Legendre Polynomials")
         plt.tight_layout()
+        plt.savefig("legendre." + extension, dpi = resolution)
         plt.show()

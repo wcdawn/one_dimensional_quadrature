@@ -12,7 +12,7 @@ It is reasonably easy to find numerical values for these Gauss-Legendre weights 
 
 Of course, the absciassae for the Gauss-Legendre quadrature for order N are the zeroes of the Nth Legendre polynomial. The weights then have a simple experssion as a function of the derivatives of the Legendre polynomials.
 
-By using the [`mplmath`](https://mpmath.org/) library in Python, it is possible to perform numerical computations with arbitrary decimal precision (at a cost, of course). Using recursion relationships to define the Legendre polynomials, I was able to numerically evaluate them in arbitrary precision without loss of accuracy. However, the use of arbitrary precision in recursive Python functions makes for a very slow evaluation of these quantities.
+By using the [`mpmath`](https://mpmath.org/) library in Python, it is possible to perform numerical computations with arbitrary decimal precision (at a cost, of course). Using recursion relationships to define the Legendre polynomials, I was able to numerically evaluate them in arbitrary precision without loss of accuracy. However, the use of arbitrary precision in recursive Python functions makes for a very slow evaluation of these quantities.
 
 One of the slowest (worst) parts of my solution algorithm for the zeroes of the Legendre polynomials is using a bisection search to find them. I begin by laying out a uniform grid and doing bisection searches within each interval until I find the correct number of zeros (known a priori).
 
